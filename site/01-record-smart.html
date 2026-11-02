@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. Record Smart · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html" class="active">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="1-record-smart">1. Record Smart</h1>
+<p>The cheapest way to get a clean transcript is to start with clean audio. Speech-to-text models are remarkably good, but no model can recover syllables the microphone never captured. Five minutes of thought before you press record saves an hour of cleanup.</p>
+<h2 id="the-one-rule-signal-then-noise">The one rule: signal, then noise</h2>
+<p>A microphone only hears <em>difference</em>. A talker 5 meters away sounds like a whisper in a river of room echo. A talker 30 cm away sounds like a person. Nearly every "the transcript is garbage" problem traces back to distance from the mic.</p>
+<p><strong>Move the mic closer before you touch any setting.</strong> This beats software, beats settings, beats everything.</p>
+<h2 id="rooms-the-invisible-instrument">Rooms: the invisible instrument</h2>
+<p>You're never just recording a voice — you're recording a room. Hard parallel surfaces (glass tables, bare walls, tile floors) reflect the voice back as echo, which smears consonants. Consonants are where speech-to-text lives or dies.</p>
+<p>Quick room fixes, in order of impact:</p>
+<ol>
+<li><strong>Pick a soft room.</strong> Carpets, curtains, bookshelves, a car interior (parked — never while driving) are your friends. Empty conference rooms with glass walls are your enemy.</li>
+<li><strong>Kill the hum sources.</strong> Doors, HVAC, laptops with spinning fans, break rooms with dishwashers. Fan noise reads to the model as "someone said a short word just then," and Whisper <em>will</em> invent one.</li>
+<li><strong>Mind the echo window.</strong> In a hard rectangular room, sitting in the center beats sitting in a corner, where reflections pile up.</li>
+</ol>
+<p>If you're stuck in a hard room: get the mic close (see the rule above) and put something soft between the talker and the nearest bare wall — a coat over a chairback genuinely helps.</p>
+<h2 id="phones-the-recorder-you-already-own">Phones: the recorder you already own</h2>
+<p>Your phone's built-in voice memo app is a genuinely good starting recorder. Three habits make phone recordings transcribable:</p>
+<ul>
+<li><strong>Hold the phone like a birthday cake.</strong> Bottom edge (where the mics live) toward the speaker, under a meter away. Do not let your hand cover the mic hole — a muffled "PKW" where a name should be is the signature of a blocked mic.</li>
+<li><strong>Voice memos ≠ phone calls.</strong> Call audio (Zoom, FaceTime, cell calls) is heavily compressed by voice-optimized codecs; it transcribes worse than the same mic recorded locally. On a call app, record <em>with the platform's own record button</em> using its supported layout, or better, record locally and merge later.</li>
+<li><strong>New recordings need one quiet test.</strong> Record the first sentence, stop, play it back at full volume <em>through the phone speaker</em> before continuing. Catching a broken mic or a "recording the pocket" mistake costs 10 seconds; catching it an hour later costs everything.</li>
+</ul>
+<p>Settings to leave alone: the phone's own noise reduction and "wind reduction" are fine for intelligibility, no need to fight them. Record mono, record in the default format (AAC/M4A on iPhone and most Androids). One megabyte per minute is a typical phone figure — the <a href="03-file-formats-size-math.html">size math chapter</a> explains why that's plenty.</p>
+<h2 id="pocket-recorders-small-dumb-and-dependable">Pocket recorders: small, dumb, and dependable</h2>
+<p>Handheld voice recorders (ZOOM H1n and friends, plus the cheaper "recorder pen" class) are excellent because they do one job. What matters when you buy or use one:</p>
+<ul>
+<li><strong>Set the format once and leave it.</strong> MP3 at 128 kbps, or WAV at 16-bit / 44.1 kHz or 16 kHz if the device has that rate. Both are fine for speech; WAV costs a lot more space for marginal gain. Flip to <a href="03-file-formats-size-math.html">file formats</a> for the full math.</li>
+<li><strong>Beware recorders with "scene modes."</strong> A "meeting" preset is real (it biases the mic pattern), but a "lecture at 20 meters" preset cannot conjure signal from that distance. The rule still applies: distance is physics.</li>
+<li><strong>Batteries and cards.</strong> Fresh batteries for anything over an hour, and know where the file goes. A recording that lives on a microSD card in a drawer is a recording you don't have.</li>
+<li><strong>For a single speaker at a desk</strong>, clamping it (or a lavalier mic) to a shirt pocket beats placing it on the table — table pickup gets thumps, tapping, and reflection-bounce off the wood.</li>
+</ul>
+<p>A $40 recorder plus a $15 lapel mic will outperform a $300 recorder left on the far side of a table. Spend on proximity before you spend on price.</p>
+<h2 id="group-recordings-the-honest-version">Group recordings: the honest version</h2>
+<p>With one mic and four people, your choices are:</p>
+<ol>
+<li><strong>Put the mic near one person</strong> (usually you, taking notes as they talk), and note in the recording who else is speaking. See the <a href="05-speaker-labeling.html">speaker-labeling chapter</a> for turning that into a two-voice transcript.</li>
+<li><strong>Put the mic in the middle and accept a messy transcript.</strong> It'll transcribe — group discussions at one mic tend to arrive as a wall of run-together sentences. Readable after cleanup, but with gaps where two people overlapped.</li>
+<li><strong>Ask everyone to record locally on their own device</strong>, then stitch the tracks. More work, best result. Worth it for a board meeting or a class lecture with visiting speakers, overkill for a five-person yarning.</li>
+</ol>
+<h2 id="the-pre-flight-checklist">The pre-flight checklist</h2>
+<p>Printable at <a href="workflow-sheet.html">Workflow Sheet</a>. The 30-second version:</p>
+<ul>
+<li>[ ] Best soft room available? Fan, dishwasher, door, printing room off?</li>
+<li>[ ] Mic within arm's reach of the <em>quietest</em> important talker?</li>
+<li>[ ] Test recording of one sentence, played back loud?</li>
+<li>[ ] Battery/space for the full planned length (with margin)?</li>
+<li>[ ] Filename convention ready, e.g. <code>2026-11-01-ct-meeting.mp3</code>? (You'll thank yourself.)</li>
+<li>[ ] If others are recording: are we on the same page?</li>
+</ul>
+<h2 id="real-recording-samples-worth-a-dollar">Real recording samples, worth a dollar</h2>
+<p>If you want calibrated ears, capture 30 seconds from each of your usual rooms — a good one and a bad one — and transcribe both with the same Whisper model. The transcript from the soft room with the close mic will be nearly flawless; the transcript from the hard room will be visibly worse, with the errors concentrated exactly where you stood far from the mic. That one experiment permanently recalibrates your recording instinct.</p>
+<p>That's it. The rest of the book is about what happens to good recordings anyway. Onward to <a href="02-local-stt-options.html">the tooling</a>.</p>
+<div class="pager">
+<a href="index.html">← Home</a>
+<span class="spacer"></span>
+<a href="02-local-stt-options.html">2. Local STT, Compared →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

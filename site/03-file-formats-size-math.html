@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. File Formats and the Size Math · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html" class="active">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="3-file-formats-and-the-size-math">3. File Formats and the Size Math</h1>
+<p>Understanding a little bit of audio math pays off forever: you'll know how much battery, disk, and setup time a recording costs <em>before</em> you press record, and you'll never be confused by the word "bitrate" again.</p>
+<h2 id="the-four-numbers-that-actually-matter">The four numbers that actually matter</h2>
+<p>Every audio file's size comes down to four numbers:</p>
+<ol>
+<li><strong>Sample rate</strong> (Hz) — how many snapshots of the sound per second. Human speech matters below ~11,000 Hz; 16,000 Hz captures it all, which is why 16 kHz (16,000 Hz) is the standard for speech.</li>
+<li><strong>Bit depth</strong> (bits) — precision of each snapshot. 16-bit is standard and fine.</li>
+<li><strong>Channels</strong> — mono (1) or stereo (2). One voice, one mic, mono. Stereo doubles the size for zero benefit when you're recording a single source.</li>
+<li><strong>Compression</strong> — none (WAV/PCM), lossy-but-clean (MP3, AAC/M4A, OGG), or lossless-but-smaller (FLAC).</li>
+</ol>
+<h2 id="the-formula">The formula</h2>
+<p><strong>Size (bytes/second) = sample rate × bit depth ÷ 8 × channels × compression ratio</strong></p>
+<p>Uncompressed WAV has a ratio of 1. MP3 at 128 kbps compresses roughly 11:1 from 44.1 kHz stereo WAV (less from 16 kHz mono).</p>
+<h2 id="cheat-sheet-mb-per-minute">Cheat sheet: MB per minute</h2>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Typical use</th>
+<th>Size per minute</th>
+<th>Size per hour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WAV, 44.1 kHz, 16-bit, stereo</td>
+<td>CD-quality reference</td>
+<td>~10.6 MB</td>
+<td>~0.6 GB</td>
+</tr>
+<tr>
+<td>WAV, 44.1 kHz, 16-bit, <strong>mono</strong></td>
+<td>One mic, raw capture</td>
+<td>~5.3 MB</td>
+<td>~0.3 GB</td>
+</tr>
+<tr>
+<td><strong>WAV, 16 kHz, 16-bit, mono</strong></td>
+<td>The speech-to-text standard</td>
+<td>~1.9 MB</td>
+<td>~115 MB</td>
+</tr>
+<tr>
+<td>MP3, 128 kbps</td>
+<td>Voice podcast/class</td>
+<td>~0.96 MB</td>
+<td>~58 MB</td>
+</tr>
+<tr>
+<td><strong>MP3, 64 kbps mono</strong></td>
+<td>Spoken word</td>
+<td>~0.48 MB</td>
+<td><strong>~29 MB</strong></td>
+</tr>
+<tr>
+<td>MP3, 32 kbps mono</td>
+<td>Bare-minimum speech</td>
+<td>~0.24 MB</td>
+<td>~14 MB</td>
+</tr>
+<tr>
+<td>AAC/M4A (iPhone voice memo)</td>
+<td>Phone default</td>
+<td>~0.5–1 MB</td>
+<td>~30–60 MB</td>
+</tr>
+<tr>
+<td>Opus/OGG, 48 kbps</td>
+<td>Voice-first modern codec</td>
+<td>~0.36 MB</td>
+<td>~22 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Worked examples of the formula:</p>
+<ul>
+<li>WAV 16 kHz mono 16-bit: 16,000 × 16 ÷ 8 × 1 = <strong>32,000 bytes/sec</strong> = 32 KB/s ≈ 1.9 MB/min ≈ 115 MB/hr.</li>
+<li>MP3 64 kbps: 64,000 bits/sec ÷ 8 = 8,000 bytes/sec = 8 KB/s ≈ 0.48 MB/min ≈ <strong>29 MB/hr</strong>.</li>
+</ul>
+<p>Phones and recorders rarely shoot over 128 kbps for voice — the extras are "music headroom" you don't need. A 90-minute meeting as 64 kbps mono MP3 is <strong>~43 MB</strong>. Anyone can move that.</p>
+<h2 id="the-2000-collapse">The 2,000× collapse</h2>
+<p>Here's the beautiful part: <strong>text is microscopically smaller than audio.</strong></p>
+<p>One hour of speech ≈ 9,000 words ≈ ~55 KB of plain text. Compare to <strong>29 MB</strong> (MP3) or <strong>115 MB</strong> (WAV) for that same audio:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Audio (1 hour, MP3 64k)</th>
+<th>Transcript (of the same hour)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>~29,000 KB</td>
+<td>~55 KB</td>
+</tr>
+<tr>
+<td>Ratio</td>
+<td>1</td>
+<td><strong>~1/530 of MP3, ~1/2,000 of WAV</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Practical consequences:</p>
+<ul>
+<li><strong>Gaping disk for transcripts.</strong> Keep every transcript forever; they weigh nothing. The 100-hour corpus of interviews you're hoarding for a book is ~30 GB of (compressed) audio and ~5 MB of text.</li>
+<li><strong>Formatting adds ~2×, not more.</strong> Timestamped, speaker-labeled transcripts run ~2–3× the raw word count in bytes. Still trivial.</li>
+<li><strong>LLM summarization math.</strong> A 1-hour transcript ≈ 9,000 words ≈ ~12,000 tokens. That fits <em>comfortably</em> in a 32,000-token local model context — chapter 6 builds on this fact.</li>
+</ul>
+<h2 id="converting-between-formats">Converting between formats</h2>
+<p>ffmpeg is the universal translator and this handbook's recommendation (also useful for <a href="02-local-stt-options.html">pre-chunking audio</a> against Whisper hallucination on silence):</p>
+<pre><code class="language-bash"># Any format → 16 kHz mono WAV (the transcription standard)
+ffmpeg -i input.m4a -ac 1 -ar 16000 output.wav
+
+# Any format → small speech MP3
+ffmpeg -i input.wav -ac 1 -b:a 64k output.mp3
+
+# Trim the first 15 minutes off
+ffmpeg -i input.wav -ss 00:15:00 output_trimmed.wav
+
+# Squeeze out long silences (helps against Whisper &quot;hallucinating&quot; text over pauses)
+ffmpeg -i input.wav -af silenceremove=stop_periods=-1:stop_duration=1:stop_threshold=-40dB output_tight.wav
+</code></pre>
+<p><code>-ac 1</code> mono, <code>-ar</code> sample rate, <code>-ss</code> seconds of skip, <code>-af silenceremove=...</code> silence trimming. A handful of flags you'll reach for constantly.</p>
+<h2 id="which-format-when">Which format, when?</h2>
+<ul>
+<li><strong>Recording (capture):</strong> Phone default (M4A/AAC) or WAV if the recorder insists. Don't agonize.</li>
+<li><strong>Transcribing (input):</strong> WAV 16 kHz mono is safest because <em>every</em> local STT tool takes it natively; but Whisper tools happily take MP3/M4A directly. If the transcript looks weird, convert to WAV and retry — it removes a whole class of container weirdness.</li>
+<li><strong>Keeping as master/archive:</strong> FLAC (lossless, ~50–60% of WAV size) if you care about the original waveform; otherwise keep MP3 64–128 kbps mono.</li>
+<li><strong>Sharing the transcript output:</strong> plain <code>.txt</code> for input to tools, <code>.md</code> for people, <code>.srt</code>/<code>.vtt</code> when you want to sync to video later. All are bytes-cheap; generate every format while you're at it.</li>
+</ul>
+<p>Bottom line: <strong>one hour of any decent speech recording ≈ 30–115 MB, and the transcript of it ≈ 55 KB.</strong> Budget with the <a href="workflow-sheet.html">Workflow Sheet</a> and never be surprised by a "disk full" error at hour 3 of a recording again.</p>
+<div class="pager">
+<a href="02-local-stt-options.html">← 2. Local STT, Compared</a>
+<span class="spacer"></span>
+<a href="04-cleanup-rules.html">4. Cleanup Rules →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

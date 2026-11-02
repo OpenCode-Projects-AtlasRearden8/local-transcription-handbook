@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. What Stays Offline · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html" class="active">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="7-what-stays-offline">7. What Stays Offline</h1>
+<p>"Local-first" isn't a religion; it's a security decision you make <em>on purpose, per step</em>. This chapter is the shortest one on purpose, because the answer is the same for almost every step of this handbook.</p>
+<h2 id="the-default-policy">The default policy</h2>
+<table>
+<thead>
+<tr>
+<th>Step of the workflow</th>
+<th>Where it runs</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recording (phone/recorder)</td>
+<td>On-device</td>
+<td><strong>Offline always</strong></td>
+</tr>
+<tr>
+<td>Transcription (Whisper/Vosk)</td>
+<td>Your machine</td>
+<td><strong>Offline always</strong></td>
+</tr>
+<tr>
+<td>Cleanup (chapter 4)</td>
+<td>Text editor on your machine</td>
+<td><strong>Offline always</strong></td>
+</tr>
+<tr>
+<td>Speaker labeling (chapter 5)</td>
+<td>Text editor + player, on your machine</td>
+<td><strong>Offline always</strong></td>
+</tr>
+<tr>
+<td>Summarization (chapter 6)</td>
+<td>Ollama or any local endpoint</td>
+<td><strong>Offline by default</strong></td>
+</tr>
+<tr>
+<td>Publishing/sharing the <em>transcript</em></td>
+<td>Wherever you choose</td>
+<td>Your call, after a read-through</td>
+</tr>
+<tr>
+<td>Publishing/sharing the <em>summary</em></td>
+<td>Wherever you choose</td>
+<td>Your call — the summary is the only thing worth an extra look</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Audio and raw transcripts of real conversations are the most private data in this whole handbook</strong> — more private than your documents, arguably as private as your messages. People say things into a mic on the understanding that they <em>said it</em>, not that they <em>published it</em>. The whole point of doing everything locally is that the sensitive stuff never crosses an internet boundary you didn't choose.</p>
+<h2 id="why-all-local-is-practical-not-just-principled">Why all local is practical, not just principled</h2>
+<p>Chapter by chapter, the local option isn't a compromise anymore:</p>
+<ul>
+<li><strong>Transcription:</strong> Whisper <code>base</code> runs offline on a laptop and is better than most cloud APIs of two years ago. The gap that remains to the best cloud models is small and shrinking, and irrelevant for meetings and notes.</li>
+<li><strong>Summarization:</strong> a local 3B model summarizing a chunked transcript is <em>good</em>, and the failure modes (chapter 6's table) are things you check for in 30 seconds.</li>
+<li><strong>No accounts, no keys, no data-retention fine print, no "we improved our models using your content" toggle to find.</strong> The entire privacy policy of your pipeline is one sentence: <em>it never left.</em></li>
+</ul>
+<h2 id="the-honest-exceptions">The honest exceptions</h2>
+<p>Saying "never online" would just be wrong. Here's where online earns its keep — each one a decision you make, not a default:</p>
+<ol>
+<li><strong>Accuracy-critical verbatim on hard audio</strong> (noisy legal deposition, fragile dialects). Cloud STT is still ahead on the nastiest input. Decision rule: <em>is the difference in accuracy worth this recording existing on someone else's server?</em> For a memoir transcript of Grandpa's stories, do NOT upload them; retry locally with a bigger model instead.</li>
+<li><strong>Quota/limits genuinely block you</strong> — a 10-hour overnight dictation with a small laptop. Chunking + a bigger local model (<a href="06-transcript-to-summary.html">chapter 6</a>) may honestly be easier than uploading. YMMV — but this one is an honest "maybe."</li>
+<li><strong>Collaborative editing of a summary</strong> you want in Google Docs <em>anyway</em> — fine. Only the <em>finished, reviewed</em> text goes there; no audio, no raw raw-transcript, and (per chapter 4) no verbatim quotes of what sensitive speakers said that you haven't reviewed for publication-worthiness.</li>
+</ol>
+<p>And a special case that trips people up: <strong>the video/web meeting platform.</strong> Zoom or Meet is <em>inherently</em> a cloud service; local recording within it keeps bytes on your machine but the meeting's audio may still transit the platform's servers. If the content is sensitive choice: meet on a locally-hosted option, or accept the recorded-content policy of the platform while keeping <em>this handbook's outputs</em> (transcript + summary) on your machine.</p>
+<h2 id="a-does-this-need-the-internet-free-flow-table-you-can-build-in-20-seconds">A "does this need the internet?" free-flow table you can build in 20 seconds</h2>
+<p>If you keep any habit from this chapter, keep this table in your notes file for the project at hand:</p>
+<pre><code>RECORDING     : offline (phone/recorder)          ✔ private
+TRANSCRIBE    : whisper.cpp base                  ✔ private
+CLEAN/LABEL   : text editor                       ✔ private
+SUMMARIZE     : Ollama localhost:11434            ✔ private
+FINAL SUMMARY : maybe Google Docs to share        ◯ my choice, reviewed
+</code></pre>
+<p>Five lines; the <em>private</em> cases are visible at a glance, and the one choice you made is explicit rather than ambient.</p>
+<h2 id="the-sentence-to-keep">The sentence to keep</h2>
+<p><strong>Everything before "publish" happens on your machine by default. What goes online is a deliberate decision, made for a finished and reviewed product, and shared <em>as text</em> — the audio stays home.</strong></p>
+<p>That closes the loop of the handbook: <a href="01-record-smart.html">Record Smart</a> → <a href="02-local-stt-options.html">Pick a tool</a> → <a href="03-file-formats-size-math.html">Do the math</a> → <a href="04-cleanup-rules.html">Clean it</a> → <a href="05-speaker-labeling.html">Label it</a> → <a href="06-transcript-to-summary.html">Summarize it</a> → <a href="#what-stays-offline">Keep it private</a>. The <a href="workflow-sheet.html">Workflow Sheet</a> puts the whole loop on one page you can print.</p>
+<div class="pager">
+<a href="06-transcript-to-summary.html">← 6. Transcript to Summary</a>
+<span class="spacer"></span>
+<a href="workflow-sheet.html">Workflow Sheet →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

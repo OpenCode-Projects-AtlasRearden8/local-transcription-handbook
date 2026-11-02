@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Transcription Handbook · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="local-transcription-handbook">Local Transcription Handbook</h1>
+<p>Turn any recording — a meeting, an interview, a lecture, a voice memo — into clean, readable text on your own machine. No subscriptions, no uploading audio to strangers, no monthly fee.</p>
+<p>This manual is written the way I'd explain it to a friend: plain English, one step at a time, and honest about what's easy, what's annoying, and what free tools genuinely can't do yet.</p>
+<p><strong>By <a href="https://dylanasdale.github.io">Asdale Dynamics, LLC</a> — beginner-friendly AI education, local-first by default.</strong></p>
+<h2 id="what-youll-learn">What you'll learn</h2>
+<ol>
+<li><strong>Record smart.</strong> How rooms, phones, and pocket recorders behave, so the hard work happens before you press record. See <a href="01-record-smart.html">Record Smart</a>.</li>
+<li><strong>Pick a free local speech-to-text tool.</strong> Whisper variants, Vosk, and friends — compared honestly, including the parts a marketing page would leave out. See <a href="02-local-stt-options.html">Free Local Speech-to-Text, Compared</a>.</li>
+<li><strong>Do the file-format and size math.</strong> Why a 2-hour recording is ~115 MB as WAV but ~30 MB as MP3, why audio shrinks 2,000× when it becomes text, and what your disk actually needs. See <a href="03-file-formats-size-math.html">File Formats and the Size Math</a>.</li>
+<li><strong>Clean up the transcript without wrecking the voice.</strong> Rules for fixing punctuation and stumbles while keeping how the person actually talks. See <a href="04-cleanup-rules.html">Cleanup Rules That Keep the Speaker's Voice</a>.</li>
+<li><strong>Identify and label speakers by hand.</strong> A realistic workflow for "who said that?" on a single-mic recording. See <a href="05-speaker-labeling.html">Hand-Labeling Speakers</a>.</li>
+<li><strong>Turn a transcript into a summary.</strong> Using any OpenAI-compatible endpoint — Ollama by default, any <code>base_url</code> you point it at, no API keys. See <a href="06-transcript-to-summary.html">From Transcript to Summary</a>.</li>
+<li><strong>Decide what stays offline.</strong> A simple policy for keeping audio private, and the rare cases where online tools earn their keep. See <a href="07-what-stays-offline.html">What Stays Offline</a>.</li>
+<li><strong>One-page <a href="workflow-sheet.html">Workflow Sheet</a></strong> you can keep next to your recorder, and a <strong><a href="glossary.html">Glossary</a></strong> for the jargon.</li>
+</ol>
+<h2 id="who-this-is-for">Who this is for</h2>
+<p>Anyone who records audio and wants the words: students, journalists, nurses documenting in-service trainings, small-business owners, podcasters, movers of estates and resellers dictating item notes, and anyone whose brain works better out loud than on a keyboard.</p>
+<h2 id="how-this-differs-from-our-other-projects">How this differs from our other projects</h2>
+<ul>
+<li><strong><a href="https://github.com/dylanasdale">voice-notes-transcriber-cli</a></strong> is a <em>tool</em>: one command that transcribes a file or folder for you. This handbook is the <em>manual</em>: it explains the ideas, the comparisons, and the cleanup craft, so you can use that tool or any setup like it with confidence.</li>
+<li><strong>audiobook-recording-handbook</strong> is about <em>producing</em> audio people listen to. This handbook is about <em>reading</em> audio as text.</li>
+</ul>
+<p>They share a philosophy — local-first, free tools, plain English — but not their subject. If you just want one command that works, use the CLI tool. If you want to understand and steer every step, this is your book.</p>
+<h2 id="what-youll-need">What you'll need</h2>
+<ul>
+<li>Any computer (Windows, Mac, or Linux) with 4 GB of RAM to spare while transcribing; 8 GB is comfortable.</li>
+<li>Optional but recommended: an NVIDIA graphics card or an Apple Silicon Mac, which makes transcription much faster.</li>
+<li>Nothing else. Every tool in this handbook is free, and nothing requires an internet connection after setup.</li>
+</ul>
+<h2 id="the-one-paragraph-version">The one-paragraph version</h2>
+<p>Record well with whatever you have, in the best corner of the room with the mic close-ish to the talker. Run the audio (WAV or MP3, mono, 16 kHz) through a local Whisper model — <code>base</code> size is the sweet spot for English. Tidy the output with a light editorial hand: fix the punctuation, keep the person. Label speakers by hand because that's still more reliable than free automatic tools for a single mic. Hand the clean transcript to a summarizer pointed at your own Ollama server (or any OpenAI-compatible <code>base_url</code>) with no API key, and get an outline and action items back in the time it takes to refill your coffee.</p>
+<p>Start with <a href="01-record-smart.html">Record Smart</a>.</p>
+<div class="pager">
+<span></span>
+<span class="spacer"></span>
+<a href="01-record-smart.html">1. Record Smart →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

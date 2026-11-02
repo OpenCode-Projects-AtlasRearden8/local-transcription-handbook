@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html" class="active">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="glossary">Glossary</h1>
+<p>Words this field uses, said the way a friend would.</p>
+<p><strong>Base URL</strong> — The internet address an API lives at, like <code>http://localhost:11434/v1</code>. You put it in tools like the summarizer script to decide <em>which</em> program will do the work. Change the base URL, change the program — same API shape.</p>
+<p><strong>Bit depth</strong> — Precision of each audio snapshot. 16-bit is the speech standard; higher is only music-relevant.</p>
+<p><strong>Bitrate</strong> — Data-per-second of a compressed audio file, e.g. "64 kbps" = 64,000 bits per second. Pure voice is fine at 64; higher adds music-quality, not speech-clarity.</p>
+<p><strong>Channels</strong> — Independent audio streams. Mono (1) = one mic. Stereo (2) = two mics. Recording one voice in stereo doubles file size for nothing.</p>
+<p><strong>Clean verbatim</strong> — Transcript type where fillers and dry restarts are removed, punctuation fixed, but <em>no word is swapped for another word</em>. This handbook's default product.</p>
+<p><strong>Context window</strong> — How much text a language model can consider at once, measured in tokens. Silently too small = silently truncated transcripts (the "model forgot the end of the meeting" bug).</p>
+<p><strong>Diarization</strong> — Automatic speaker identification, splitting a transcript by which voice spoke. Works best in clean two-voice audio; hand-labeling beats it for one messy mic.</p>
+<p><strong>Endpoint</strong> — The full URL of a specific API action, e.g. base URL + <code>/chat/completions</code>. The "door" you knock on with a request.</p>
+<p><strong>ffmpeg</strong> — The universal audio/video conversion command-line tool. Every flag in this handbook (<code>-ac</code>, <code>-ar</code>, <code>-ss</code>, <code>-af silenceremove</code>) is ffmpeg.</p>
+<p><strong>FLAC</strong> — Lossless compressed audio: identical sound to WAV at roughly half the size. Good archive format.</p>
+<p><strong>Filler</strong> — Speech padding like "um," "uh," "like." Removable in clean verbatim; keep dialect and pet phrases, which are <em>voice</em>, not noise.</p>
+<p><strong>Hallucination (STT)</strong> — When a transcriber invents fluent text over silence/noise — most often boilerplate like "Thanks for watching!" Whisper's best-known quirk; fix by trimming silences and short clips.</p>
+<p><strong>kHZ (kilohertz)</strong> — Thousands of samples per second. Speech capture standard is 16 kHz sample rate; audio-CD standard is 44.1 kHz.</p>
+<p><strong>LLM (Large Language Model)</strong> — The text model behind summarizers. Runs locally (Ollama, LM Studio) or in the cloud (OpenAI etc.).</p>
+<p><strong>lmstudio / llama.cpp server</strong> — Alternative local apps to run an LLM behind an OpenAI-compatible API, if Ollama isn't your style. Same API shape; different server software.</p>
+<p><strong>Mono</strong> — Single channel. Record voice in mono unless you know you need stereo.</p>
+<p><strong>num_ctx / context_length</strong> — The request parameter (Ollama: <code>num_ctx</code>) that sets a model's context window for a given request. Bump it to 16k/32k for hour-long transcripts.</p>
+<p><strong>OpenAI-compatible API</strong> — The URL+JSON request/response shape made standard by OpenAI and now adopted everywhere, including fully local tools. Lets you swap engines by changing one URL, no key needed locally.</p>
+<p><strong>Ollama</strong> — The app that runs an LLM locally and exposes it at <code>http://localhost:11434/v1</code>. Default summarizer backend for this handbook.</p>
+<p><strong>Opus / OGG</strong> — Modern speech-friendly codecs, smaller than MP3 at equal quality. Fine, but MP3/M4A are still the universal playback formats.</p>
+<p><strong>Sample rate</strong> — Snapshots of sound captured per second, in Hz. 16,000 Hz covers all of human speech; higher rates are for music.</p>
+<p><strong>Token</strong> — Chunk of text (~¾ of a word in English) that is the LLM's unit of counting. A 1-hour speech transcript ≈ 12,000 tokens.</p>
+<p><strong>Transcript proportions</strong> — 1 hour of speech ≈ 9,000 words ≈ ~55 KB of text, vs ~30–115 MB of the audio. Text is 2,000× lighter — which is why keeping transcripts forever is free.</p>
+<p><strong>Verbatim</strong> — Transcript type preserving everything including fillers and stumbles, used for legal/ethnographic accuracy. Contrast with clean verbatim.</p>
+<p><strong>whisper.cpp</strong> — The one-binary terminal implementation of Whisper models. The "one command" recommended path in this handbook.</p>
+<p><strong>Whisper (variants)</strong> — OpenAI's open transcription model, reused by whisper.cpp, faster-whisper, and the original Python implementation. Same model file, different runners.</p>
+<div class="pager">
+<a href="workflow-sheet.html">← Workflow Sheet</a>
+<span class="spacer"></span>
+<span></span>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

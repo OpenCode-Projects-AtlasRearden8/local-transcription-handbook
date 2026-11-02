@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Cleanup Rules That Keep the Speaker&#x27;s Voice · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html" class="active">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="4-cleanup-rules-that-keep-the-speakers-voice">4. Cleanup Rules That Keep the Speaker's Voice</h1>
+<p>A raw Whisper transcript is accurate in words and wrong in <em>feel</em>: no paragraph breaks, mid-sentence stumbles reproduced verbatim, punctuation invented by a model that never heard a human being. The cleanup pass is where a transcript becomes readable.</p>
+<p>The whole chapter comes down to one question: <strong>are you transcribing what people said, or what you wish they'd said?</strong> Both are legitimate, but they're different products, and mixing them up is how you lose a reader's trust.</p>
+<h2 id="two-products-verbatim-vs-clean-verbatim">Two products: verbatim vs. clean verbatim</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Verbatim (court-reporter style)</th>
+<th>Clean verbatim (this book's default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Legal, ethnographic, "quote them exactly"</td>
+<td>Reading, sharing, summarizing</td>
+</tr>
+<tr>
+<td>Filler ("um," "uh," "like")</td>
+<td>Keep all</td>
+<td>Remove fillers</td>
+</tr>
+<tr>
+<td>Repeats &amp; self-corrections ("I went— I went to—")</td>
+<td>Keep</td>
+<td>Remove, or keep if emphasis</td>
+</tr>
+<tr>
+<td>False starts ("we were supposed to—" )</td>
+<td>Keep</td>
+<td>Trim trailing, keep the restart</td>
+</tr>
+<tr>
+<td>Word swaps</td>
+<td>Never</td>
+<td>Never — <em>see the hard rule below</em></td>
+</tr>
+<tr>
+<td>Punctuation</td>
+<td>Add minimally</td>
+<td>Fix fully</td>
+</tr>
+<tr>
+<td>Paragraphing</td>
+<td>Minimal</td>
+<td>Frequent, by idea</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The hard rule, unbreakable in either mode:</strong> never swap a word for a word. You may delete a filler; you may not turn "kinda" into "kind of," or "gonna" into "going to." The first is cleanup; the second is ghostwriting. If a sentence is only understandable with your edit, put the meaning in brackets, not in the quoted sentence: <code>[referring to the new badge policy]</code>.</p>
+<h2 id="the-whisper-shaped-problems-and-their-fixes">The Whisper-shaped problems (and their fixes)</h2>
+<ol>
+<li><strong>A wall of text.</strong> Whisper gives you one mega-paragraph. Fix: split paragraphs <em>by idea</em> — every time the topic changes or a new speaker starts a stretch of talking. A good paragraph in a transcript is 1–6 sentences; nobody is grading you on the grammar of paragraph breaks.</li>
+<li><strong>Invented punctuation.</strong> Whisper adds periods confidently and puts commas wherever it likes. Fix: re-punctuate by reading aloud; the "voice" of your punctuation should follow the speaker's own rhythm.</li>
+<li><strong>Hallucinated phrases over silence.</strong> A recurring classic: the transcript says something <em>nobody said</em>, usually fluent boilerplate ("Thanks for watching!") — the model filled a gap of silence/muzak/template audio. Fix: trim silences before transcribing (the <code>silenceremove</code> ffmpeg trick in <a href="03-file-formats-size-math.html">chapter 3</a>); never publish a quoted sentence you don't remember hearing.</li>
+<li><strong>Butchered names.</strong> Whisper is brilliant at ordinary vocabulary and terrible at "Asdale," "ffxiv tank," "LaTisha." Fix: pre-empt with <code>--prompt "Speakers: LaTisha, Dylan Asdale"</code> where the tool supports it (<a href="02-local-stt-options.html">chapter 2</a>); globally find-and-replace by ear afterward; when you can't identify the name, mark it <code>[unknown name]</code> rather than guessing.</li>
+<li><strong>Numbers and dates.</strong> "twenty twenty-five" vs "2025." Fix as speaker-intended: a date said as "twenty twenty-five" gets written as 2025; but an exact quoted rule like "twenty percent" stays if in doubt, write what the person meant, not whatever the model chose.</li>
+</ol>
+<h2 id="the-10-minute-cleanup-pass-by-hand">The 10-minute cleanup pass (by hand)</h2>
+<p>A systematic order beats a fiddly read-through:</p>
+<ol>
+<li><strong>First read for names.</strong> List all names/technical terms; fix globally (find-and-replace, one at a time with <em>review</em> — never blind "replace-all," or you'll "fix" a benign match).</li>
+<li><strong>Second pass for speakers.</strong> Every time the speaker changes, do the labeling (full method in <a href="05-speaker-labeling.html">chapter 5</a>).</li>
+<li><strong>Third pass for paragraphs.</strong> Split, split, split. Rest your eyes; a wall paragraph is a wall paragraph.</li>
+<li><strong>Fourth pass: fillers and stumbles</strong>, per your <a href="#two-products-verbatim-vs-clean-verbatim">verbatim-vs-clean table</a>. Read the passage <em>aloud in your head</em> with the deletion first; if meaning is lost, put it back.</li>
+<li><strong>Final pass: the trust check.</strong> Read the first and last 5 minutes only, hunting for hallucinations and punctuation defaults. Long-transcript trust is front-loaded; that's where readers look for quality signals.</li>
+</ol>
+<h2 id="keeping-the-voice-while-deleting-the-noise">Keeping the voice while deleting the noise</h2>
+<p>This is craft, not mechanics. Heuristics that preserve a person's voice:</p>
+<ul>
+<li><strong>Keep idiosyncrasies that are <em>style</em>.</strong> "Wanna," "gotta," "y'know ما" — personal diction is the fingerprint of a human. Fillers (um/uh) are the temporary scaffolding of speech, and removing them helps the sentence land; but permanent phrases are <em>identity</em>, not noise, and cutting them whitens everyone's voice into the same voice.</li>
+<li><strong>Keep laughter where it happens</strong>: spelled out ("[laughs]") not interpreted ("jokingly"). Never interpret; always report.</li>
+<li><strong>Keep restarts when the restart IS the sentence.</strong> "I— I no I don't want— I don't want the smallest one, I want the medium one" is a person correcting themselves in real time, and the stumbles carry the emotion. Trim the <em>dry vertical</em> re-restarts ("I went— I went to school") but keep <em>meaningful</em> ones.</li>
+<li><strong>One rule if ambiguities multiply:</strong> if you have to <em>decide</em> what the person meant, that's a judgment call — use brackets and note it, or don't publish the quote at all. An honest <code>[inaudible 23:14]</code> beats a confidently wrong word.</li>
+<li><strong>When an LLM does the cleanup</strong> (chapter 6 can help here): the model must be given the same hard rule — see the prompt in the <a href="06-transcript-to-summary.html">summarizer chapter</a>, which includes the verbatim-protection clause in bold. LLM cleanup drifts toward "make sentences nicer," which silently means "make sentences standard," which is <em>exactly</em> the voice erasure this chapter exists to prevent.</li>
+</ul>
+<h2 id="the-3-tier-cleanup-ladder">The 3-tier cleanup ladder</h2>
+<p>Not every transcript deserves an hour. Pick the tier in advance and move on:</p>
+<ul>
+<li><strong>Tier 1 — searchable (5 min per hr of audio):</strong> Light spell fixes of names, some paragraph breaks. For your own reference/archive.</li>
+<li><strong>Tier 2 — readable (15–30 min per hr):</strong> Full <a href="#the-10-minute-cleanup-pass-by-hand">10-minute pass</a>, including speakers labeled. For sharing with the recorded group. <strong>This is the right tier for 90% of recordings.</strong></li>
+<li><strong>Tier 3 — publishable (60+ min per hr):</strong> Rounds of passes, checked quotes, a self-consistency pass, and a trust check. For books, journalism, content that will outlive the reader forgetfulness. Get the speaker to confirm direct quotes; your <a href="01-record-smart.html">recordings from chapter 1 workaround notes</a> for hard rooms make this less necessary but never automatic.</li>
+</ul>
+<p>Next, the fiddliest part mentioned above done properly: <a href="05-speaker-labeling.html">Hand-Labeling Speakers</a>.</p>
+<div class="pager">
+<a href="03-file-formats-size-math.html">← 3. Formats and Size Math</a>
+<span class="spacer"></span>
+<a href="05-speaker-labeling.html">5. Speaker Labeling →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

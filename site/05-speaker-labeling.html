@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Hand-Labeling Speakers · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html" class="active">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="5-hand-labeling-speakers">5. Hand-Labeling Speakers</h1>
+<p>You recorded a conversation with one mic. Whisper transcribed it faithfully — as one continuous monologue by one invisible ghost. Now: <em>who said what?</em></p>
+<h2 id="the-honest-state-of-speaker-identification">The honest state of speaker identification</h2>
+<p>There exist real automatic tools for this ("diarization"). Free options like <code>pyannote-audio</code> exist and work — sometimes well. Here's the honest picture:</p>
+<ol>
+<li><strong>They work best with two clear voices, one mic, no overlap.</strong> That's also the case you'd handle fine by hand.</li>
+<li><strong>They add real setup weight</strong> (Python dependencies, model downloads, HF account gating).</li>
+<li><strong>They still mislabel</strong> ≈ a significant fraction of turns in real-world rooms — noisy backgrounds, similar voices, the machine will confidently tell you the story is "A, B, A, A, B" when it was "A, B, B."</li>
+</ol>
+<p>For a single recording you're already editing by hand (<a href="04-cleanup-rules.html">chapter 4</a>), labeling by hand is usually <em>faster overall</em> and more trustworthy. Diarization earns its keep in bulk (100 recordings, same setup each time) — not in your five-person meeting.</p>
+<h2 id="setup-that-makes-hand-labeling-fast">Setup that makes hand-labeling fast</h2>
+<p>The work happens at two moments — one before recording, one after — each worth ten seconds of habit.</p>
+<p><strong>At recording time (from <a href="01-record-smart.html">chapter 1</a>):</strong></p>
+<ul>
+<li>Capture timestamps mentally: every time the speaker changes ("new speaker"), tap the recorder, say "next speaker," or note the phone-clock time (e.g., "3:12, Priya starts"). Two seconds per speaker change beats arriving home to a mystery.</li>
+<li>If two people's speaking turns already flow in a predictable rhythm, audibly note turn order at the top: "This is Priya, then me, alternating."</li>
+</ul>
+<p><strong>Right after transcribing:</strong></p>
+<ol>
+<li>Open the transcript with timestamps visible. Whisper's <code>-otxt</code> text strip timestamps; use <code>-ovtt</code>/<code>-osrt</code> output (or <code>--output_format vtt</code>) so you see a timestamp every few lines, cheaply. The <a href="03-file-formats-size-math.html">size chapter</a> has the flags.</li>
+<li>Play the audio alongside at <strong>1.5×–2× speed</strong>. You're not relistening content, you're triaging <em>voice identity</em>.</li>
+</ol>
+<h2 id="the-labeling-pass-step-by-step">The labeling pass, step by step</h2>
+<p>Work with two identifying properties of each voice — <em>timbre</em> (male/female/child/high/low/gravelly) and <em>pattern</em> (the person who says "[…] actually" or "hm hm"). Then:</p>
+<ol>
+<li><strong>Mark the first unambiguous lines.</strong> Using the speaker change markers from recording time, label a handful of certain moments at the top of the file ("Ravi" at 00:12, "me" at 00:48). Don't label everything yet.</li>
+<li><strong>Scrub every section change, guided by your recorded cues.</strong> "Next speaker" (you tap/whistle) is your map. Between cues, verify the new voice by timbre and pattern.</li>
+<li><strong>Label with a consistent edit pattern you can automate</strong> — for instance a one-line tag before each turn:
+   <code>RAVI: So the Zettelkasten idea is higher value per unit of thought.
+   DYLAN: Mm. Walk me through the filing part.</code>
+   Plain text survives anything (find-and-replace them later for polish — the <a href="03-file-formats-size-math.html">size chapter</a> recommends a simpler ASCII form for that: <code>RAVI:</code> with no spaces is faster to search).</li>
+<li><strong>Ambiguity policy, decided in advance:</strong> If you can't label with confident 95% correctness, label as <code>UNKNOWN (00:37:41)</code> and move on — with the timestamp so a relisten later is easy. Never guess a name for attribution to a real person. This matters the most when a transcript will be seen by a third party.</li>
+<li><strong>One voice or two?</strong> Use the narrator trick: read a suspicious passage aloud, voice-acted, in the two candidate voices. Your ear knows voices — the reading is just how you get from brain to microphone to consciousness.</li>
+</ol>
+<h2 id="when-several-mics-or-remote-callers-join-in">When several mics or remote callers join in</h2>
+<ul>
+<li><strong>Everyone records themselves on the phone</strong> (<a href="01-record-smart.html">chapter 1</a>). Then per-speaker mono WAV, all at 16 kHz — label by file, not by ear: <code>speaker= priya.wav</code> is labeling with zero effort.</li>
+<li><strong>Zoom/Meet local multi-track recordings.</strong> The platform <em>saves each participant as a separate track</em> when the host clicks "record locally," and the export gives you one audio file per participant. Label by file, not by ear — that beats any hand-labeling. (Online hosts, see <a href="07-what-stays-offline.html">what stays offline</a> for the privacy trade.)</li>
+<li><strong>One mp3 with multilingual speech segments.</strong> Whisper's <code>-ml</code> flag (or segment-confidence scores with faster-whisper) can hint at language shifts; a language switch is often a speaker switch, too. Used sparingly, this is a decent scrubbing hint.</li>
+</ul>
+<h2 id="sizing-your-expectations">Sizing your expectations</h2>
+<p>One hour of a four-person meeting ≈ 60 speaker turns ≈ <strong>20–30 minutes of careful labeling and verification</strong> with the method above. That time is the price of being <em>correct</em>; diarization partly buys you a different and worse price — you'll spend 15 minutes in setup on every future meeting and you'll get 3 mislabels of "A, B, B, A" to manually fix anyway.</p>
+<p>For the fraction of recordings where every line of <em>who</em> matters (interviews, board minutes, research), it's a fair trade.</p>
+<p>Next: the transcript is clean and labeled. Now the door opens for the LLM summarizer — <a href="06-transcript-to-summary.html">From Transcript to Summary</a>.</p>
+<div class="pager">
+<a href="04-cleanup-rules.html">← 4. Cleanup Rules</a>
+<span class="spacer"></span>
+<a href="06-transcript-to-summary.html">6. Transcript to Summary →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

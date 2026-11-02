@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Workflow Sheet · Local Transcription Handbook</title>
+<style>
+:root {
+  --ink: #26323f;
+  --soft: #5b6b7a;
+  --accent: #0f766e;
+  --accent-soft: #ccf1ec;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --line: #e4e1d8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--accent-soft);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+}
+pre {
+  background: #f2f0ea;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9em 1.1em;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0;
+  padding: 0.2em 1.1em;
+  color: var(--soft);
+  background: var(--card);
+  border-radius: 0 8px 8px 0;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 0.95em; }
+th, td { border: 1px solid var(--line); padding: 0.45em 0.7em; text-align: left; }
+th { background: var(--accent-soft); }
+tr:nth-child(even) td { background: #f6f4ee; }
+
+.layout { display: flex; max-width: 1100px; margin: 0 auto; }
+aside#nav {
+  flex: 0 0 240px;
+  padding: 1.5em 1em;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+}
+aside#nav .brand {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+aside#nav .brand span { color: var(--accent); }
+aside#nav ul { list-style: none; margin: 0; padding: 0; }
+aside#nav li { margin: 0.15em 0; }
+aside#nav li.sep { margin-top: 1em; border-top: 1px solid var(--line); padding-top: 0.8em; }
+aside#nav a { text-decoration: none; color: var(--soft); display: block; padding: 0.2em 0.5em; border-radius: 6px; font-size: 0.95em; }
+aside#nav a:hover { background: var(--accent-soft); color: var(--ink); }
+aside#nav li.active a { background: var(--accent); color: #fff; }
+main { flex: 1; min-width: 0; padding: 2.2em 3em 3em; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9em; margin-top: 0; }
+h2 { margin-top: 1.8em; border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.kicker { color: var(--soft); font-style: italic; margin: -0.4em 0 1.6em; }
+.doc-footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9em; }
+.pager { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; }
+.pager a {
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+}
+.pager a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.pager .spacer { flex: 1; }
+input#searchbox {
+  width: 100%;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 1em;
+  background: var(--card);
+}
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  aside#nav { position: static; height: auto; flex: none; border-right: none; border-bottom: 1px solid var(--line); }
+  main { padding: 1.5em 1.2em 2.5em; }
+}
+@media print {
+  aside#nav, .pager { display: none; }
+  main { padding: 0; }
+  body { background: #fff; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="nav">
+  <a class="brand" href="index.html">Local <span>Transcription</span> Handbook</a>
+  <input id="searchbox" type="search" placeholder="filter chapters…">
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="01-record-smart.html">1. Record Smart</a></li>
+<li><a href="02-local-stt-options.html">2. Local STT, Compared</a></li>
+<li><a href="03-file-formats-size-math.html">3. Formats and Size Math</a></li>
+<li><a href="04-cleanup-rules.html">4. Cleanup Rules</a></li>
+<li><a href="05-speaker-labeling.html">5. Speaker Labeling</a></li>
+<li><a href="06-transcript-to-summary.html">6. Transcript to Summary</a></li>
+<li><a href="07-what-stays-offline.html">7. What Stays Offline</a></li>
+<li class="sep"><a href="workflow-sheet.html" class="active">Workflow Sheet</a></li>
+<li class="sep"><a href="glossary.html">Glossary</a></li>
+  </ul>
+</aside>
+<main>
+<h1 id="the-workflow-sheet">The Workflow Sheet</h1>
+<p>One page. Print it, tape it near the recorder, stop re-deriving the pipeline from memory.</p>
+<h2 id="before-you-press-record-30-seconds">BEFORE you press record (30 seconds)</h2>
+<ul>
+<li>[ ] Soft room (carpet/curtains &gt; glass/tile), fans/HVAC off or away</li>
+<li>[ ] Mic within arm's reach of the quietest important talker</li>
+<li>[ ] Phone/recorded test of one sentence, played back loud ✓</li>
+<li>[ ] Battery + storage for planned length + margin (rule of thumb: 64 kbps mono MP3 ≈ 0.5 MB/min; WAV 16 kHz mono ≈ 2 MB/min)</li>
+<li>[ ] Filename convention: <code>YYYY-MM-DD-what-where.mp3</code></li>
+<li>[ ] Multi-speaker? Note who's present at the top of the recording; tap/say "next speaker" at each change</li>
+</ul>
+<h2 id="transcribe">TRANSCRIBE</h2>
+<ul>
+<li>[ ] (Optional) Convert to 16 kHz mono, squeeze silences:
+      <code>bash
+      ffmpeg -i in.m4a -ac 1 -ar 16000 -af silenceremove=stop_periods=-1:stop_duration=1:stop_threshold=-40dB out.wav</code></li>
+<li>[ ] whisper.cpp, <code>base</code> or <code>small</code> model, VTT output for timestamps:
+      <code>bash
+      ./whisper-cli -m models/ggml-base.en.bin -f out.wav -ovtt --prompt "Speakers: &lt;names&gt;"</code></li>
+<li>[ ] Long silences trimmed beforehand (models invent speech hallucinations in silence)</li>
+</ul>
+<h2 id="clean-up-tier-in-brackets-minutes-per-hour-of-audio">CLEAN UP (tier in brackets = minutes per hour of audio)</h2>
+<ul>
+<li>[ ] <strong>Names first:</strong> list every name/term; find-and-replace with review, never blind</li>
+<li>[ ] <strong>Chunks:</strong> split the mega-paragraph by idea, 1–6 sentences each</li>
+<li>[ ] <strong>Fillers:</strong> delete "um/uh" and dry restarts — <strong>never swap a word for a word</strong> (keep "gonna", dialect, pet phrases — that's voice)</li>
+<li>[ ] <strong>Trust check:</strong> read the first + last 5 minutes; hunt hallucinations (fluency over silence, "Thanks for watching!")</li>
+<li>[ ] <code>T1</code> searchable ~5 / <code>T2</code> readable ~15–30 / <code>T3</code> publishable 60+; pick in advance</li>
+</ul>
+<h2 id="label-speakers-one-mic-multi-person">LABEL SPEAKERS (one mic, multi-person)</h2>
+<ul>
+<li>[ ] Play transcript at 1.5–2× using VTT timestamps + your "next speaker" taps</li>
+<li>[ ] Label format: <code>RAVI: ...</code> one line per turn</li>
+<li>[ ] Uncertain at 95%? Label <code>UNKNOWN (0:37:12)</code> and move on — never guess a person's name</li>
+<li>[ ] Everyone local-recorded on their own device? Label by file instead of by ear</li>
+</ul>
+<h2 id="summarize-all-local-no-keys">SUMMARIZE (all local, no keys)</h2>
+<ul>
+<li>[ ] Ensure Ollama running: <code>curl http://localhost:11434/v1/models</code></li>
+<li>[ ] Model: <code>llama3.2:3b</code> (default) / <code>llama3.1:8b</code> if 16 GB RAM</li>
+<li>[ ] Backed:
+      <code>bash
+      python3 scripts/summarize_transcript.py meeting.txt            # Ollama default
+      # repoint anywhere OpenAI-compatible:
+      python3 scripts/summarize_transcript.py meeting.txt --base-url http://localhost:1234/v1 --model qwen2.5:7b</code></li>
+<li>[ ] Long transcript? Stage it: outline every 15 min → merge outline → targeted pulls quoting exact sentences → YOU write the final summary</li>
+<li>[ ] Context window: ask for ≥16k, or the script's default; a 1-hour transcript ≈ 12,000 tokens</li>
+<li>[ ] Action-item prompt ends in a checklist: WHO / WHAT / WHEN</li>
+</ul>
+<h2 id="privacy-checkpoint-one-decision">PRIVACY CHECKPOINT (one decision)</h2>
+<pre><code>RECORDING/TRANSCRIBE/CLEAN/LABEL/SUMMARIZE ... all local by default
+SHARE as text (summary, reviewed) → your deliberate choice; audio stays home
+</code></pre>
+<div class="pager">
+<a href="07-what-stays-offline.html">← 7. What Stays Offline</a>
+<span class="spacer"></span>
+<a href="glossary.html">Glossary →</a>
+</div>
+<div class="doc-footer">
+  <p><em>Local Transcription Handbook</em> — turn recordings into clean text on your own machine.<br>
+  By Asdale Dynamics, LLC · free, local-first, no accounts required. © 2026</p>
+</div>
+</main>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('searchbox');
+  if (!box) return;
+  box.addEventListener('input', function () {
+    var q = box.value.toLowerCase();
+    document.querySelectorAll('aside#nav li[data-name]').forEach(function (li) {
+      var a = li.querySelector('a');
+      var hit = !q || (a && a.textContent.toLowerCase().indexOf(q) !== -1);
+      li.style.display = hit ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
